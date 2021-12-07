@@ -1,0 +1,43 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hey",
+                "Hello",
+                "How are you",
+                "Good day",
+                "Are you there?"
+            ],
+            "responses": [
+                "Hey there!",
+                "Hi!",
+                "Hi there, good to see you!",
+                "Hello! How are you?"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["Bye", "Goodbye", "See you later"],
+            "responses": [
+                "Have a nice day~",
+                "Bye! See you later~",
+                "Good night!"
+            ]
+        },
+        {
+            "tag": "funny",
+            "patterns": [
+                "Tell me a joke!",
+                "You got a joke?",
+                "Could you tell me something funny?"
+            ],
+            "responses": [
+                "Hear about the new restaurant called Karma? There’s no menu: You get what you deserve.",
+                "What starts with E, ends with E, and has only 1 letter in it? An Envelope.",
+                "How does the ocean say hello? It waves."
+            ]
+        }
+    ]
+}
