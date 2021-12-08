@@ -50,12 +50,12 @@ class ChatDataSet(Dataset):
         return self.n_samples
 
 
-batch_size = 8
+batch_size = 10
 input_size = len(all_words)     # len(x_train[0]) also works
-hidden_size = 8
+hidden_size = 10
 output_size = len(tags)
 learning_rate = 0.001
-num_epochs = 1000
+num_epochs = 1200
 
 dataset = ChatDataSet()
 train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True, num_workers=0)
@@ -78,9 +78,9 @@ for e in range(num_epochs):
         optimizer.step()
     
     if (e+1) % 100 == 0:
-        print(f'epoch {e+1}/{num_epochs}, loss={loss.item():.4f}')
+        print(f'epoch {e+1}/{num_epochs}, loss = {loss.item():.4f}')
 
-print(f'final loss, loss={loss.item():.4f}')
+print(f'final loss = {loss.item():.4f}')
 
 data = {
     "model_state": model.state_dict(),
@@ -94,5 +94,5 @@ data = {
 FILE = 'data.pth'
 torch.save(data, FILE)
 
-print(f'training complete. File save to {FILE}')
+print(f'Training complete. File save to {FILE}')
 

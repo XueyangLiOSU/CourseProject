@@ -38,6 +38,36 @@
                 "What starts with E, ends with E, and has only 1 letter in it? An Envelope.",
                 "How does the ocean say hello? It waves."
             ]
+        },
+        {
+            "tag": "weather",
+            "patterns": [
+                "How is the weather?",
+                "What's the weather like?",
+                "Is the weather nice today?"
+            ],
+            "responses": [
+                "It's lovely day!",
+                "Wonderful!",
+                "Sunny as always!"
+            ]
+        },
+        {
+            "tag": "movie",
+            "patterns": [
+                "What's your favorite movie?",
+                "Can you recommend me a movie?",
+                "What's the film you like most?",
+                "Do you have any good movie for me?",
+                "Which film would you suggest?",
+                "I'd like to watch a movie. Any ideas?"
+            ],
+            "responses": [
+                "'The Silence of the Lambs'. It is a classic.",
+                "Try 'The Dark Knight'. Especially if you're an action or comics fan.",
+                "I heard 'Fight Club' is pretty good.",
+                "'Roman Holiday' is my favorite."
+            ]
         }
     ]
 }
