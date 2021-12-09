@@ -38,9 +38,17 @@ def get_response(msg):
     # apply the sentiment analysis first
     sentiment_tag = sentiment_analysis(msg)
     if sentiment_tag == -1:
-        return "I'm sorry to hear that. Shall we watch a movie to cheer you up?"
+        tag = 'negative'
+        for i in intents['intents']:
+            if tag == i['tag']:
+                response = random.choice(i['responses'])
+                return response
     elif sentiment_tag == 1:
-        return "That's great! Let's watch a movie to enjoy the lovely day!"
+        tag = 'positive'
+        for i in intents['intents']:
+            if tag == i['tag']:
+                response = random.choice(i['responses'])
+                return response
     else:
         # if neutral, do the usual chatbot routine
         sentence = tokenize(msg)
@@ -57,7 +65,7 @@ def get_response(msg):
 
         if prob.item() > 0.8:
             for i in intents['intents']:
-                if tag == i ['tag']:
+                if tag == i['tag']:
                     response = random.choice(i['responses'])
                     return response
 

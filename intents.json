@@ -68,6 +68,22 @@
                 "I heard 'Fight Club' is pretty good.",
                 "'Roman Holiday' is my favorite."
             ]
+        },
+        {
+            "tag": "positive",
+            "responses":[
+                "I'm glad to hear that!",
+                "That's great! Let's watch a movie to enjoy the lovely day!",
+                "Keep it up!"
+            ]
+        },
+        {
+            "tag": "negative",
+            "responses": [
+                "I'm sorry to hear that...",
+                "I'm sorry to hear that. Shall we watch a movie to cheer you up?",
+                "I'm shall you'll get over this. I have faith in you!"
+            ]
         }
     ]
 }
