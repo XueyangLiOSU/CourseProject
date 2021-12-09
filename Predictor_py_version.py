@@ -2,13 +2,6 @@ import pickle
 import re
 import string
 
-#Load model and vectorizer
-with open('classifier', 'rb') as f:
-    cv_class, logreg = pickle.load(f)
-    
-#Ask for sentence input
-words=input()
-
 #Delete punctuations
 def Text_clean(text):
     text=re.sub(r' \n|\n', ' ', text)
@@ -26,16 +19,20 @@ def Text_clean(text):
     text = re.sub('\w*\d\w*', '', text)
     return text
 
-round=lambda x:Text_clean(x)
-words=Text_clean(words)
+def sentiment_analysis(words):
+    #Load model and vectorizer
+    with open('classifier', 'rb') as f:
+        cv_class, logreg = pickle.load(f)
 
-#corpus
-corpus=[]
-corpus.append(words)
-#Vecoterization
-test_sentence=cv_class.transform(corpus)
-#predict
-predict = logreg.predict(test_sentence)
+    round=lambda x:Text_clean(x)
+    words=Text_clean(words)
 
+    #corpus
+    corpus=[]
+    corpus.append(words)
+    #Vecoterization
+    test_sentence=cv_class.transform(corpus)
+    #predict
+    predict = logreg.predict(test_sentence)
 
-print(predict)
+    return predict[0]
