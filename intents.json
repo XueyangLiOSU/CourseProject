@@ -71,6 +71,7 @@
         },
         {
             "tag": "positive",
+            "patterns": [],
             "responses":[
                 "I'm glad to hear that!",
                 "That's great! Let's watch a movie to enjoy the lovely day!",
@@ -79,6 +80,7 @@
         },
         {
             "tag": "negative",
+            "patterns": [],
             "responses": [
                 "I'm sorry to hear that...",
                 "I'm sorry to hear that. Shall we watch a movie to cheer you up?",
