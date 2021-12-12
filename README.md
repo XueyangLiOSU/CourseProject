@@ -1,6 +1,5 @@
-# CS410 CourseProject - Chatbot with NLP and Sentiment Analysis
-
-Please fork this repository and paste the github link of your fork on Microsoft CMT. Detailed instructions are on Coursera under Week 1: Course Project Overview/Week 9 Activities.
+# CS410 CourseProject - Team "Noobs": Chatbot with NLP and Sentiment Analysis
 
 
 Link to Software Usage Tutorial Presentation video: https://youtu.be/Dl9DuswhkqI
+Please see the file "Project Documentation.pdf" for Documentation.
