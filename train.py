@@ -70,6 +70,7 @@ for e in range(num_epochs):
     for (w, labels) in train_loader:
         # forward
         outputs = model(w)
+        labels = labels.to(dtype=torch.long)
         loss = criterion(outputs, labels)
 
         # backward and optim
